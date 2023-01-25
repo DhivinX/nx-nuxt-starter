@@ -1,12 +1,12 @@
 {
-  "name": "nx-nestjs-vue",
+  "name": "nx-nuxt-starter",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
-  "main": "dist/apps/web/electron/main/index.js",
   "scripts": {
     "install": "node tools/scripts/patch-nx-dep-graph.js",
     "apps:dev": "nx run-many --target=serve --all",
+    "web:dev": "nx run web:serve",
     "build": "npm run clean && nx run-many --target=lint,build --configuration=production --all",
     "clean": "rimraf dist",
     "lint": "nx run-many --target=lint --all"
