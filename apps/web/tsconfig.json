@@ -1,4 +1,11 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "../../tmp/.nuxt-web/tsconfig.json",
+
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@workspace/shared": ["../../libs/shared/src/index.ts"]
+    }
+  }
 }
