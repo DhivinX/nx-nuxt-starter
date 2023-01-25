@@ -1,0 +1,30 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2017", "dom"],
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "importHelpers": true,
+        "esModuleInterop": true,
+        "skipLibCheck": false,
+        "skipDefaultLibCheck": false,
+        "strict": true,
+        "strictBindCallApply": false,
+        "noImplicitReturns": true,
+        "strictNullChecks": false,
+        "noImplicitAny": false,
+
+        "baseUrl": ".",
+        "paths": {
+            "@workspace/shared": ["libs/shared/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}

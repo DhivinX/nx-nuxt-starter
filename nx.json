@@ -1,0 +1,44 @@
+{
+    "$schema": "https://raw.githubusercontent.com/nrwl/nx/master/packages/nx/schemas/nx-schema.json",
+    "npmScope": "workspace",
+    "affected": {
+        "defaultBase": "master"
+    },
+    "implicitDependencies": {
+        "package.json": {
+            "dependencies": "*",
+            "devDependencies": "*"
+        },
+        ".eslintrc.json": "*"
+    },
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "nx/tasks-runners/default",
+            "options": {
+                "cacheableOperations": ["build", "lint", "test", "e2e"]
+            }
+        }
+    },
+    "targetDependencies": {
+        "build": [
+            {
+                "target": "build",
+                "projects": "dependencies"
+            }
+        ]
+    },
+    "defaultProject": "server",
+    "cli": {
+        "defaultCollection": "@nxext/vite"
+    },
+    "generators": {
+        "@nxext/vite": {
+            "application": {
+                "linter": "eslint"
+            },
+            "library": {
+                "linter": "eslint"
+            }
+        }
+    }
+}
