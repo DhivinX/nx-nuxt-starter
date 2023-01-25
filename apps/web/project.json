@@ -7,8 +7,13 @@
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npx nuxt build",
-        "cwd": "apps/web"
+        "commands": [
+          "npx nuxt build",
+          "npx copyfiles -u 1 .output/**/* ../../dist/apps/web",
+          "npx rimraf .output"
+        ],
+        "cwd": "apps/web",
+        "parallel": false
       },
       "configurations": {
         "production": {}
@@ -16,9 +21,18 @@
     },
     "serve": {
       "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
       "options": {
         "command": "npx nuxt dev",
         "cwd": "apps/web"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/apps/web"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/web"
       }
     },
     "lint": {

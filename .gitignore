@@ -38,6 +38,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
+.output
 .nuxt
 apps/**/config.yaml
 apps/**/components.d.ts
