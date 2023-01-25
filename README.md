@@ -1,112 +1,39 @@
-<p align="center">
-  <a href="https://vuejs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" width="90" alt="Vue Logo" /></a>
-  <a href="https://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="90" alt="Nest Logo" /></a>
-</p>
-
-# Monorepo starter
-## NX | NestJS | Vue 3 | TypeScript 
+# Nuxt Monorepo starter
+## NX | Nuxt 3 | TypeScript 
 
 ## Description
 
-Monorepo template with NX Workspaces, Vue 3, NestJS and TypeScript.
+Monorepo template with NX Workspaces, Nuxt 3 and TypeScript.
 
 * [NX workspace](https://nx.dev/getting-started/intro) to manage monorepo
-* Full Stack: Front-end, Back-end, Shared/Utils module packages 
-* Front-end package: [Vue 3](https://vuejs.org/guide/introduction.html) | [Vite](https://vitejs.dev/guide/)
-* Back-end package: [NestJS](https://docs.nestjs.com)
-* Electron for desktop support
-* Capacitor for mobile support
+* Nuxt application and Shared/Utils module packages 
+* Front-end package: [Nuxt 3](https://nuxt.com/docs)
 * Shared package: shared code used in all packages
 
 ## Prerequisites
 
 Suggest to install globally in dev environment:
 
-[nx](https://nx.dev)
-[nest-cli](https://docs.nestjs.com/cli/overview)
+- [nx](https://nx.dev)
 
 ## Quick start
 
 ```bash
 
 # 1. Clone the repository
-git clone https://github.com/DhivinX/nx-nestjs-vue.git
+git clone https://github.com/DhivinX/nx-nuxt-starter.git
 
 # 2. Enter your newly-cloned folder
-cd nx-nestjs-vue
+cd nx-nuxt-starter
 
 # 3. Install the project and build packages in libs folder
 npm install
 
-# 4. Dev: Run frontend with hot reload 
-npm run web:dev
-
-# 5. Dev: Run backend with hot reload 
-# Note that you need to create the config.yaml file in the server directory beforehand
-# You can copy the config.example.yaml file and rename it to config.yaml
-# Then you can configure database access and other server settings
-npm run server:dev
-
-# 6. Or run backend and frontend with hot reload parallel
+# 4. Or run apps with hot reload parallel
 npm run apps:dev
 
 ```
 
-## Back-end server config example
-
-### config.example.json
-Path: `apps/server/src/assets`
-
-```yaml
-# HTTP / HTTPS server settings
-http:
-  # If you change the server port you have to change it also on the front-end
-  port: 3000 
-
-  # If true it starts the HTTPS server
-  # Note that you need to fill in the credentials fields for the SSL certificate
-  secure: false
-
-  # If secure option is set to true you must define the paths for the SSL certificate
-  credentials:
-    key: 'PATH_TO_KEY_DIR/key.pem'
-    cert: 'PATH_TO_CERT_DIR/cert.pem'
-
-  # Cross-Origin Resource Sharing domain origins 
-  # More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-  cors: 
-    - 'http://localhost:8080'
-
-# Database server settings
-# More info: https://typeorm.io
-db:
-  # Database type (postgres, mysql etc.)
-  type: 'postgres' 
-
-  # Database server address
-  host: 'localhost' 
-
-  # Database server port
-  port: 5432
-
-  # Database name
-  database: ''
-
-  # Database username
-  username: ''
-
-  # Database password
-  password: ''
-
-  # Disable this in the production version of the application
-  synchronize: true
-
-# Keys required for hashing passwords and tokens
-# They should be filled with random, unique strings
-keys:
-  pwdsalt: ''
-  jwt: ''
-```
 
 ## Volar and Visual Studio Code (Takeover Mode)
 
@@ -121,14 +48,8 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 
 ## Top-Level Scripts
  
-* `apps:dev` - run front-end and back-end simultaneously with hot reload
+* `apps:dev` - run all apps simultaneously with hot reload
 * `web:dev` - run front-end with hot reload
-* `web:electron:dev` - run front-end in electron app with hot reload
-* `web:electron:build` - build electron app with frontend
-* `mobile:dev` - run mobile front-end with hot reload
-* `mobile:android` - build front-end and sync android project
-* `server:dev` - run back-end with hot reload
-* `server:seed` - seed script for server
 * `build` - build all packages
 * `clean` - clean all packages
 * `lint` - lint all packages
@@ -172,7 +93,7 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 
 ## Enhancements and Bug Reports
 
-If you find a bug, or have an enhancement in mind please post [issues](https://github.com/DhivinX/nx-nestjs-vue/issues) on GitHub.
+If you find a bug, or have an enhancement in mind please post [issues](https://github.com/DhivinX/nx-nuxt-starter/issues) on GitHub.
 
 ## License
 
