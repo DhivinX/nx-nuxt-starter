@@ -51,8 +51,10 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 * `apps:dev` - run all apps simultaneously with hot reload
 * `web:dev` - run front-end with hot reload
 * `build` - build all packages
+* `test` - run tests for all packages
 * `clean` - clean all packages
 * `lint` - lint all packages
+* `dep-graph` - patch nx dep graph for vue files and open the project graph of the workspace in the browser
 
 ## Visual Studio Code extensions
 
@@ -66,10 +68,11 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
     "editorconfig.editorconfig",
     "syler.sass-indented",
     "eamodio.gitlens",
-    "donjayamanne.githistory",
     "aaron-bond.better-comments",
     "visualstudioexptteam.vscodeintellicode",
-    "pkief.material-icon-theme"
+    "pkief.material-icon-theme",
+    "mikestead.dotenv",
+    "firsttris.vscode-jest-runner"
   ]
 }
 
@@ -86,7 +89,7 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 ### Optional
 
 * `eamodio.gitlens` - GitLens - Git supercharged.
-* `donjayamanne.githistory` - Git History
+* `mikestead.dotenv` - DotENV - Support for dotenv file syntax
 * `visualstudioexptteam.vscodeintellicode` - IntelliCode
 * `pkief.material-icon-theme` - Material Icon Theme in VS Code
 * `aaron-bond.better-comments` - Better Comments
