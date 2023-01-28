@@ -4,12 +4,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "install": "node tools/scripts/patch-nx-dep-graph.js",
-    "apps:dev": "nx run-many --target=serve --all",
+    "apps:dev": "nx run-many --target=serve",
     "web:dev": "nx run web:serve",
-    "build": "npm run clean && nx run-many --target=lint,build --configuration=production --all",
+    "build": "npm run clean && nx run-many --target=lint,test,build --configuration=production",
+    "test": "nx run-many --target=test --verbose",
     "clean": "rimraf dist",
-    "lint": "nx run-many --target=lint --all"
+    "lint": "nx run-many --target=lint",
+    "dep-graph": "node tools/scripts/patch-graph.js && nx graph"
   },
   "devDependencies": {
     "@nrwl/cli": "15.6.2",
