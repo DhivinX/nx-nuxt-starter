@@ -1,6 +1,6 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "../../tmp/.nuxt-web/tsconfig.json",
+  "extends": "../../dist/.nuxt-web/tsconfig.json",
 
   "compilerOptions": {
     "paths": {

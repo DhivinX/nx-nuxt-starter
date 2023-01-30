@@ -8,7 +8,7 @@ const workspaceDir = (p?: string) => resolve(`../../${p}`);
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     modulesDir: [workspaceDir('node_modules')],
-    buildDir: workspaceDir('tmp/.nuxt-web'),
+    buildDir: workspaceDir('dist/.nuxt-web'),
     srcDir: './src',
 
     vite: {
